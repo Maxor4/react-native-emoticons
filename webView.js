@@ -1,6 +1,6 @@
 'use strict';
 
-import React, { PropTypes } from 'react';
+import React, { Component } from 'react';
 import {
     Text,
     View,
@@ -14,10 +14,13 @@ import {
     Platform,
     Button,
 } from 'react-native';
+
+import PropTypes from 'prop-types';
+
 const {height, width} = Dimensions.get('window');
 var backImg = require('./rg_left.png');
 
-class Webview extends React.Component {
+class Webview extends Component {
 
     static navigationOptions = ({ navigation, screenProps }) => ({
         title: 'GreatGreatGreatGreat',

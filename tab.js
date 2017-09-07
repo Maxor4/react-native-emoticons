@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
     Text,
     View,
@@ -9,9 +9,12 @@ import {
     ScrollView,
     Image
 } from 'react-native';
+
+import PropTypes from 'prop-types';
+
 import styles from './style';
 
-class TabBar extends React.Component {
+class TabBar extends Component {
     constructor(props) {
         super(props);
         this._setAnimationValue = this._setAnimationValue.bind(this);
@@ -24,9 +27,9 @@ class TabBar extends React.Component {
 
 
     static propTypes = {
-        goToPage: React.PropTypes.func,
-        activeTab: React.PropTypes.number,
-        tabs: React.PropTypes.array,
+        goToPage: PropTypes.func,
+        activeTab: PropTypes.number,
+        tabs: PropTypes.array,
     };
 
     componentDidMount() {

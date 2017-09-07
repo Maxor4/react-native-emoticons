@@ -1,6 +1,6 @@
 'use strict';
 
-import React, { PropTypes } from 'react';
+import React, { Component } from 'react';
 import {
     Text,
     View,
@@ -13,11 +13,14 @@ import {
     WebView,
     Platform
 } from 'react-native';
+
+import PropTypes from 'prop-types';
+
 var injectedJavaScript = `
     delete window.postMessage
 `;
 
-class More extends React.Component {
+class More extends Component {
     constructor(props) {
         super(props);
 

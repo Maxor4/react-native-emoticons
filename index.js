@@ -1,4 +1,4 @@
-import React,{PropTypes} from 'react';
+import React, {Component} from 'react';
 import {
     Text,
     View,
@@ -13,6 +13,7 @@ import {
     AsyncStorage,
     Platform
 } from 'react-native';
+import PropTypes from 'prop-types';
 import styles from './style';
 import emojiData from 'emoji-datasource';
 import _ from 'lodash';
@@ -45,7 +46,7 @@ const choicenessAndroid = ['grinning', 'grin', 'joy', 'sweat_smile', 'laughing',
     'beers', 'soccer', 'airplane', 'iphone', 'tada', 'heart', 'broken_heart', 'flag_us', 'flag_cn'];
 
 const HISTORY_STORAGE = 'history_storage';
-class Emoticons extends React.Component {
+class Emoticons extends Component {
     constructor(props) {
         super(props);
         this._classify = this._classify.bind(this);

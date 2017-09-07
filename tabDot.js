@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
     Text,
     View,
@@ -8,8 +8,9 @@ import {
     Platform
 } from 'react-native';
 import styles from './style';
+import PropTypes from 'prop-types';
 
-class TabBarDot extends React.Component {
+class TabBarDot extends Component {
     constructor(props) {
         super(props);
         this._setAnimationValue = this._setAnimationValue.bind(this);
@@ -22,9 +23,9 @@ class TabBarDot extends React.Component {
 
 
     static propTypes = {
-        goToPage: React.PropTypes.func,
-        activeTab: React.PropTypes.number,
-        tabs: React.PropTypes.array,
+        goToPage: PropTypes.func,
+        activeTab: PropTypes.number,
+        tabs: PropTypes.array,
     };
 
     componentDidMount() {
